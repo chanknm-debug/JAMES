@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>詹煌進 James｜網頁設計 × 電子商務 — 個人作品與經歷</title>
+<title> James｜網頁設計 × 電子商務 — 個人作品與經歷</title>
 <meta name="description" content="詹煌進（James）22 年網頁設計與電子商務經歷：從廣告設計、Flash 動畫、網站架設，到首飾電商的商品視覺、SEO 與 AI 工作流。作品與完整經歷一頁看完。">
-<meta name="author" content="詹煌進 James">
+<meta name="author" content=" James">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%23F1F0EB'/%3E%3Ccircle%20cx='16'%20cy='16'%20r='8.5'%20fill='none'%20stroke='%23131417'%20stroke-width='1.5'/%3E%3Cpath%20d='M16%202v7M16%2023v7M2%2016h7M23%2016h7'%20stroke='%23C4006B'%20stroke-width='1.5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&display=swap">
@@ -162,6 +162,14 @@ figcaption span:last-child{color:var(--magenta)}
 .work[hidden]{display:none}
 .works-note{font-size:11.5px;color:var(--ink-3);line-height:1.8;margin-top:26px}
 
+/* 商品影片卡片：9:16 直式短片，以深底留邊呈現 */
+.work--video .work-img{position:relative;background:var(--ink)}
+.work--video .work-img img{aspect-ratio:4/5;object-fit:contain;object-position:center}
+.work--video .play{position:absolute;left:50%;top:50%;width:50px;height:50px;margin:-25px 0 0 -25px;border:1px solid rgba(241,240,235,.9);border-radius:50%;background:rgba(19,20,23,.34);display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
+.work--video .play::after{content:"";border-style:solid;border-width:7px 0 7px 11px;border-color:transparent transparent transparent #F1F0EB;transform:translateX(2px)}
+.work--video:hover .play{background:rgba(196,0,107,.82);border-color:rgba(241,240,235,1)}
+.work--video .work-meta span:last-child{color:var(--magenta)}
+
 /* ===== 經歷 ===== */
 .hist{border-top:1px solid var(--ink)}
 .hist-head{display:none}
@@ -212,6 +220,8 @@ figcaption span:last-child{color:var(--magenta)}
 .lb-close:hover{background:rgba(241,240,235,.14)}
 .lb-stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:14px 0}
 .lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border:1px solid rgba(241,240,235,.2)}
+.lb-stage video{max-width:100%;max-height:100%;object-fit:contain;border:1px solid rgba(241,240,235,.2);background:#000}
+.lb-stage img[hidden],.lb-stage video[hidden]{display:none}
 .lb-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:4px}
 .lb-cap{color:rgba(241,240,235,.86);font-size:12.5px;line-height:1.65;text-align:center;flex:1;min-width:0}
 .lb-nav{background:transparent;border:1px solid rgba(241,240,235,.4);color:var(--paper);width:46px;height:46px;font-size:16px;cursor:pointer;flex:0 0 auto}
@@ -239,7 +249,7 @@ figcaption span:last-child{color:var(--magenta)}
 <!-- ===== 頁首 ===== -->
 <header class="masthead">
   <div class="wrap masthead-in">
-    <a class="brand" href="#top">詹煌進<i>JAMES</i></a>
+    <a class="brand" href="#top">履歷內容<i>JAMES</i></a>
     <nav class="nav" aria-label="頁面導覽">
       <a href="#career">職涯</a>
       <a href="#skills">專長</a>
@@ -257,7 +267,7 @@ figcaption span:last-child{color:var(--magenta)}
   <div class="wrap hero-in">
     <div class="hero-grid">
       <div>
-        <h1>詹煌進</h1>
+        <h1>個人介紹</h1>
         <p class="latin">JAMES CHAN</p>
         <div class="hero-rule" aria-hidden="true"></div>
         <p class="lead">「以創意為起點，以技術為實力，以學習突破未來。」</p>
@@ -281,7 +291,7 @@ figcaption span:last-child{color:var(--magenta)}
       <figure class="figure">
         <div class="frame">
           <div class="reg" aria-hidden="true"></div>
-          <img src="assets/portrait.jpg" alt="詹煌進的近照" width="600" height="767" fetchpriority="high">
+          <img src="assets/portrait.jpg" alt="個人的近照" width="600" height="767" fetchpriority="high">
         </div>
         <figcaption><span>詹煌進 · James</span><span>2026 求職中</span></figcaption>
       </figure>
@@ -544,20 +554,111 @@ figcaption span:last-child{color:var(--magenta)}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="sec-title">做過的版面</h2>
-      <span class="sec-meta">21 件．2001 — 2011</span>
+      <span class="sec-meta">30 件．2001 — 2026</span>
     </div>
     <p class="sec-sub">
-      十四個網站專案——品牌官網、電商購物站、集團與經紀形象站，加上七件 Flash 互動遊戲。以下是當時的實際成品畫面，點開可看完整截圖。
+      十四個網站專案——品牌官網、電商購物站、集團與經紀形象站，七件 Flash 互動遊戲，以及九支近期製作的銀飾商品影片。網站與遊戲是當時的實際成品畫面，影片為 9:16 直式短片，點開即可播放。
     </p>
 
     <div class="filters" role="group" aria-label="作品分類篩選">
-      <button type="button" data-filter="all" aria-pressed="true">全部 21</button>
+      <button type="button" data-filter="all" aria-pressed="true">全部 30</button>
+      <button type="button" data-filter="video" aria-pressed="false">商品影片 9</button>
       <button type="button" data-filter="ecom" aria-pressed="false">電子商務 5</button>
       <button type="button" data-filter="site" aria-pressed="false">企業網站 9</button>
       <button type="button" data-filter="game" aria-pressed="false">互動遊戲 7</button>
     </div>
 
     <div class="works" id="worksGrid">
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE_1.mp4" data-poster="assets/video-move-1.jpg" data-title="凱爾特十字銀墜｜線結纏繞的十字與圓環" data-desc="以凱爾特線結盤繞十字與圓環，硫化處理的凹處與拋光高光形成對比；斜側光環繞拍攝，10 秒帶完整圈細節。">
+        <span class="work-img">
+          <img src="assets/video-move-1.jpg" alt="凱爾特十字銀墜商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">凱爾特十字銀墜｜線結纏繞的十字與圓環</span>
+        <span class="work-d">線結浮雕、硫化凹處與環繞運鏡。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(2).mp4" data-poster="assets/video-move-2.jpg" data-title="骷髏十字墜｜紅瞳寶石與四向骷髏" data-desc="十字四端各嵌一顆骷髏，中心紅寶石像一隻瞳孔；黑底配玫瑰與皮革道具，走哥德風的暗調路線。">
+        <span class="work-img">
+          <img src="assets/video-move-2.jpg" alt="骷髏十字墜紅瞳寶石商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">骷髏十字墜｜紅瞳寶石與四向骷髏</span>
+        <span class="work-d">四端骷髏、紅瞳主石與哥德暗調場景。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(3).mp4" data-poster="assets/video-move-3.jpg" data-title="老鷹展翅墜｜枝條圓框中的羽翼" data-desc="展翅老鷹嵌在枯枝圓框中，羽毛以分層浮雕處理，鏡頭由翅尖推進到鷹首，白底棚拍。">
+        <span class="work-img">
+          <img src="assets/video-move-3.jpg" alt="老鷹展翅銀墜商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">老鷹展翅墜｜枝條圓框中的羽翼</span>
+        <span class="work-d">羽毛分層浮雕與枯枝圓框的組合。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(4).mp4" data-poster="assets/video-move-4.jpg" data-title="圓框骷髏墜｜浮雕骷髏與卷草邊飾" data-desc="圓形銀牌上高浮雕骷髏，外圈卷草紋與仿舊底紋，正面光拍攝強調齒列與顴骨陰影。">
+        <span class="work-img">
+          <img src="assets/video-move-4.jpg" alt="圓框骷髏銀墜商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">圓框骷髏墜｜浮雕骷髏與卷草邊飾</span>
+        <span class="work-d">高浮雕骷髏、卷草邊圈與仿舊底紋。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(5).mp4" data-poster="assets/video-move-5.jpg" data-title="骷髏戒｜煙霧與皮革上的暗調展示" data-desc="骷髏造型銀戒置於皮革上，背景煙霧緩慢飄過，用低光比拍出鑄造質感與戒身的曲面。">
+        <span class="work-img">
+          <img src="assets/video-move-5.jpg" alt="骷髏造型銀戒商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">骷髏戒｜煙霧與皮革上的暗調展示</span>
+        <span class="work-d">皮革底台、飄散煙霧與低光比打光。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(6).mp4" data-poster="assets/video-move-6.jpg" data-title="荷魯斯之眼｜埃及象形文字圓墜" data-desc="荷魯斯之眼居中、外圈環繞象形文字，沙地實景搭配斜射光，強化出土文物般的氣氛。">
+        <span class="work-img">
+          <img src="assets/video-move-6.jpg" alt="荷魯斯之眼埃及圓墜商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">荷魯斯之眼｜埃及象形文字圓墜</span>
+        <span class="work-d">眼睛主紋、象形文字外圈與沙地實景。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(7).mp4" data-poster="assets/video-move-7.jpg" data-title="星形鑲鑽線戒｜窄版排戒的側面光" data-desc="窄版銀戒側面連續排列星形鑲座，每座四顆小鑽；淺景深配乾燥葉材，以 720×1280 直式輸出。">
+        <span class="work-img">
+          <img src="assets/video-move-7.jpg" alt="星形鑲鑽線戒商品影片畫面" width="720" height="1280" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">星形鑲鑽線戒｜窄版排戒的側面光</span>
+        <span class="work-d">連續星形鑲座、排鑽細節與淺景深。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(8).mp4" data-poster="assets/video-move-8.jpg" data-title="桃色寶石金墜｜主石與鑽石光環" data-desc="桃色刻面主石外圈 Halo 鑲鑽，金色鏈身垂墜；柔光近拍帶出寶石折射與金工邊緣。">
+        <span class="work-img">
+          <img src="assets/video-move-8.jpg" alt="桃色寶石金墜商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">桃色寶石金墜｜主石與鑽石光環</span>
+        <span class="work-d">刻面主石、Halo 鑲鑽與金色鏈身。</span>
+      </button>
+
+      <button class="work work--video" type="button" data-cat="video" data-video="assets/MOVE%20(9).mp4" data-poster="assets/video-move-9.jpg" data-title="黑瑪瑙十字戒｜圓珠主石與十字結構" data-desc="黑色圓珠主石嵌在十字結構的戒身上，素面背景正拍，重點在金屬倒角與黑瑪瑙的鏡面反射。">
+        <span class="work-img">
+          <img src="assets/video-move-9.jpg" alt="黑瑪瑙十字銀戒商品影片畫面" width="360" height="640" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </span>
+        <span class="work-meta"><span>商品影片</span><span>9:16・10 秒</span></span>
+        <span class="work-t">黑瑪瑙十字戒｜圓珠主石與十字結構</span>
+        <span class="work-d">黑瑪瑙圓珠、十字戒身與金屬倒角。</span>
+      </button>
+
       <button class="work" type="button" data-cat="ecom" data-img="assets/work-sogue.jpg" data-title="蘇格南 SOGUE｜品牌鞋款電商首頁" data-desc="鞋類品牌的官方購物站首頁：形象主視覺、品牌故事與商品輪播集中在同一畫面，2009 年建置。">
         <span class="work-img"><img src="assets/work-sogue.jpg" alt="蘇格南 SOGUE 品牌鞋款電商首頁" width="800" height="613" loading="lazy"></span>
         <span class="work-meta"><span>電子商務</span><span>站型規劃</span></span>
@@ -868,10 +969,13 @@ figcaption span:last-child{color:var(--magenta)}
 <!-- ===== 作品燈箱 ===== -->
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="作品大圖">
   <div class="lb-bar">
-    <span id="lbCount">1 / 21</span>
+    <span id="lbCount">1 / 30</span>
     <button class="lb-close" type="button" id="lbClose">關閉 ESC</button>
   </div>
-  <div class="lb-stage"><img id="lbImg" src="" alt=""></div>
+  <div class="lb-stage">
+    <img id="lbImg" src="" alt="">
+    <video id="lbVid" controls playsinline webkit-playsinline preload="metadata" aria-label="商品影片播放" hidden></video>
+  </div>
   <div class="lb-foot">
     <button class="lb-nav" type="button" id="lbPrev" aria-label="上一件作品">‹</button>
     <p class="lb-cap" id="lbCap"></p>
@@ -942,10 +1046,72 @@ figcaption span:last-child{color:var(--magenta)}
   /* ---- 燈箱 ---- */
   var lb = document.getElementById('lb');
   var lbImg = document.getElementById('lbImg');
+  var lbVid = document.getElementById('lbVid');
   var lbCap = document.getElementById('lbCap');
   var lbCount = document.getElementById('lbCount');
   var lastFocus = null;
   var index = 0;
+
+  /* 影片檔名容錯：assets 內 MOVE (1) 可能存成 MOVE_1.mp4，反之亦然 */
+  var VIDEO_FALLBACK = {
+    'assets/MOVE_1.mp4': 'assets/MOVE%20(1).mp4',
+    'assets/MOVE%20(1).mp4': 'assets/MOVE_1.mp4'
+  };
+
+  function playVideo(){
+    if(!lbVid) return;
+    var p = lbVid.play();
+    if(p && p.catch){
+      /* 瀏覽器攔截有聲自動播放時，改為靜音起播，使用者可用控制列開聲 */
+      p.catch(function(){
+        try{
+          lbVid.muted = true;
+          var q = lbVid.play();
+          if(q && q.catch){ q.catch(function(){}); }
+        }catch(e){}
+      });
+    }
+  }
+
+  function showVideo(item){
+    var src = item.getAttribute('data-video');
+    if(!src){ return false; }
+    lbImg.removeAttribute('src');
+    lbImg.alt = item.getAttribute('data-title') || '';
+    lbImg.setAttribute('hidden','');
+    var poster = item.getAttribute('data-poster');
+    if(poster){ lbVid.setAttribute('poster', poster); } else { lbVid.removeAttribute('poster'); }
+    lbVid.setAttribute('src', src);
+    lbVid.removeAttribute('hidden');
+    lbVid.muted = false;
+    lbVid.load();
+    playVideo();
+    return true;
+  }
+
+  function stopVideo(){
+    if(!lbVid) return;
+    try{ lbVid.pause(); }catch(e){}
+    lbVid.removeAttribute('src');
+    lbVid.removeAttribute('poster');
+    lbVid.setAttribute('hidden','');
+    try{ lbVid.load(); }catch(e){}
+  }
+
+  if(lbVid){
+    lbVid.addEventListener('error', function(){
+      var cur = lbVid.getAttribute('src') || '';
+      if(!cur) return;
+      var alt = VIDEO_FALLBACK[cur];
+      if(alt){
+        lbVid.setAttribute('src', alt);
+        lbVid.load();
+        playVideo();
+        return;
+      }
+      showToast('影片載入失敗，請確認 assets 內的 MP4 檔名');
+    });
+  }
 
   function renderLightbox(){
     var list = visibleWorks();
@@ -953,10 +1119,20 @@ figcaption span:last-child{color:var(--magenta)}
     if(index < 0) index = list.length - 1;
     if(index >= list.length) index = 0;
     var item = list[index];
-    lbImg.src = item.getAttribute('data-img');
-    lbImg.alt = item.getAttribute('data-title');
-    lbCap.textContent = item.getAttribute('data-title') + '　—　' + item.getAttribute('data-desc');
+    var title = item.getAttribute('data-title') || '';
+    var desc = item.getAttribute('data-desc') || '';
+
+    lbCap.textContent = title + '　—　' + desc;
     lbCount.textContent = (index + 1) + ' / ' + list.length;
+
+    if(item.getAttribute('data-video')){
+      showVideo(item);
+    } else {
+      stopVideo();
+      lbImg.src = item.getAttribute('data-img') || '';
+      lbImg.alt = title;
+      lbImg.removeAttribute('hidden');
+    }
   }
 
   function openLightbox(item){
@@ -970,6 +1146,7 @@ figcaption span:last-child{color:var(--magenta)}
 
   function closeLightbox(){
     if(lb.hasAttribute('hidden')) return;
+    stopVideo();
     lb.setAttribute('hidden','');
     document.body.style.overflow = '';
     if(lastFocus && lastFocus.focus) lastFocus.focus();
