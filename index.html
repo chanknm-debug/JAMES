@@ -83,6 +83,9 @@ h1{font-family:var(--serif);font-weight:700;font-size:clamp(46px,11.5vw,100px);l
 .reg::after{top:50%;left:-11px;height:1px;width:calc(100% + 22px)}
 figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:11px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink-3);line-height:1.6}
 figcaption span:last-child{color:var(--magenta)}
+/* 頭像下方的專業九宮格海報：沿用 .frame 邊框，改為等比例完整顯示 */
+.poster-fig{margin-top:26px}
+.poster-fig .frame img{aspect-ratio:auto;object-fit:contain;object-position:50% 50%;filter:none;height:auto}
 
 /* 資料帶 */
 .strip{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink);margin-top:44px}
@@ -294,6 +297,13 @@ figcaption span:last-child{color:var(--magenta)}
           <img src="assets/portrait.jpg" alt="個人的近照" width="600" height="767" fetchpriority="high">
         </div>
         <figcaption><span>詹煌進 · James</span><span>2026 求職中</span></figcaption>
+      </figure>
+
+      <figure class="figure poster-fig">
+        <div class="frame">
+          <img src="assets/poster-9grid.jpg" alt="我的專業九宮格價值：美術、設計、電商與 AI 能力的總覽圖" width="1254" height="1254" loading="lazy">
+        </div>
+        <figcaption><span>我的專業九宮格價值</span><span>能力總覽</span></figcaption>
       </figure>
     </div>
 
